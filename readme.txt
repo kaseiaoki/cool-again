@@ -1,1 +1,1 @@
-# cool again is wordpress theme for minimum web page
+#cool again is wordpress theme for minimum web page
