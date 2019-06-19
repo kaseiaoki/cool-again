@@ -22,37 +22,34 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cool-again' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$cool_again_description = get_bloginfo( 'description', 'display' );
-			if ( $cool_again_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $cool_again_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cool-again' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+    <header class="hero is-12-mobile is-info is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered ">
+                <div class="title column is-12-mobile is-quater is-herf">
+                    <div class="media">
+                        <div class="media-left">
+                            <?php the_custom_logo();?>
+                        </div>
+                        <div class="media-content">
+                            <?php
+                            if ( is_front_page() && is_home() ) :
+			                    ?>
+                            <h1 class="site-title title is-1"><a  class="has-text-white"<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                            <?php
+			                else:
+				            ?>
+                            <p class="site-title title is-1"><a class="has-text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                            <?php
+                            endif;
+                            $cool_again_description = get_bloginfo( 'description', 'display' );
+                            if ( $cool_again_description || is_customize_preview() ) :
+                            ?>
+                            <p class="site-description subtitle is-4"><?php echo $cool_again_description; /* WPCS: xss ok. */ ?></p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="content" class="site-content has-background-light">
