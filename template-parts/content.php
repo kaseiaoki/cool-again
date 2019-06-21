@@ -42,7 +42,6 @@
                     <?php cool_again_post_thumbnail(); ?>
 
                     <div class="entry-content">
-                        </hr>
                         <?php
                         the_content( sprintf(
                             wp_kses(

@@ -160,6 +160,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 function my_scripts() {
-    wp_enqueue_style('bootstrap4', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css');
+    wp_enqueue_style('bulma', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css');
+    wp_enqueue_style('bulma-prefers-dark', 'https://unpkg.com/bulma-prefers-dark');
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts' );

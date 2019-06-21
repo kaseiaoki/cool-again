@@ -9,18 +9,44 @@
 
 get_header();
 ?>
-
-    <div class="column is-10-mobile is-offset-1-mobile is-10 is-offset-1">
+<div class="columns">
+    <div class="column is-10-mobile is-offset-1-mobile is-7 is-offset-1">
         <div id="primary" class="content-area">
-            <main id="main"  class="site-main has-background-light">
-
-            <hr>
+            <main id="main"  class="site-main">
             <?php
+
             while ( have_posts() ) :
                 the_post();
+                the_title( '<h1 class="entry-title title is-1">', '</h1>' );
+                if ( 'post' === get_post_type() ) :
+                    ?>
+                    <span class="entry-meta sub-title is-3">
+                    <?php
+                    cool_again_posted_on();
+                    cool_again_posted_by();
+                    ?>
+                    <?php
+                    the_content( sprintf(
+                        wp_kses(
+                        /* translators: %s: Name of current post. Only visible to screen readers */
+                            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'cool-again' ),
+                            array(
+                                'span' => array(
+                                    'class' => array(),
+                                ),
+                            )
+                        ),
+                        get_the_title()
+                    ) );
 
-                get_template_part( 'template-parts/content', get_post_type() );
-
+                    wp_link_pages( array(
+                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cool-again' ),
+                        'after'  => '</div>',
+                    ) );
+                    ?>
+                </span><!-- .entry-meta -->
+                <?php endif; ?>
+                <?php
                 the_post_navigation();
 
             endwhile; // End of the loop.
@@ -29,11 +55,12 @@ get_header();
                 comments_template();
             endif;
             ?>
-            <hr>
-
             </main><!-- #main -->
 	    </div><!-- #primary -->
     </div>
+    <?php
+            get_sidebar();
+    ?>
+</div>
 <?php
-get_sidebar();
 get_footer();

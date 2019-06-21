@@ -10,9 +10,8 @@
  */
 
 ?>
-
 	</div><!-- #content -->
-<footer id="colophon" class="footer has-background-grey-lighter">
+<footer id="colophon" class="footer">
     <div class="site-info content has-text-centered ">
         <p>
             <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cool-again' ) ); ?>">

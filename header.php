@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" />
 	<?php wp_head(); ?>
 </head>
 
@@ -52,4 +52,4 @@
             </div>
         </div>
     </header>
-    <div id="content" class="site-content has-background-light">
+    <div id="content" class="site-content section"  >

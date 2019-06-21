@@ -17,8 +17,7 @@ get_header();
 <div class="columns">
     <div class="column is-10-mobile is-offset-1-mobile is-7 is-offset-1">
         <div id="primary" class="content-area">
-            <main id="main"  class="site-main has-background-light">
-                    <hr>
+            <main id="main"  class="site-main">
 		<?php
 		if ( have_posts() ) :
 
@@ -53,7 +52,6 @@ get_header();
 		endif;
 		?>
                 </div>
-        <hr>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
