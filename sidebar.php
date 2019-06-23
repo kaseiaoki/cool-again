@@ -11,9 +11,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 ?>
-        <div class="column is-12-mobile is-offset-1-mobile is-4 section">
-            <aside id="secondary" class="widget-area class="menu"">
-                <?php dynamic_sidebar( 'sidebar-1' ); ?>
-            </aside><!-- #secondary -->
-        </div >
-    </div>
+            <div class="column is-5 is-tablet-12 section">
+                <aside id="secondary" class="widget-area class="menu has-text-center">
+                    <?php dynamic_sidebar( 'sidebar-1' ); ?>
+                </aside><!-- #secondary -->
+            </div >
+</div>

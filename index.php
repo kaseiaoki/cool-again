@@ -15,7 +15,7 @@
 get_header();
 ?>
 <div class="columns">
-    <div class="column is-10-mobile is-offset-1-mobile is-7 is-offset-1">
+    <div class="column is-12-tablet">
         <div id="primary" class="content-area">
             <main id="main"  class="site-main">
 		<?php
@@ -26,7 +26,6 @@ get_header();
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-                <hr/>
 				<?php
 			endif;
 

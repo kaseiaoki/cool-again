@@ -8,11 +8,10 @@
  */
 
 ?>
-<div class="columns is-vcentered">
-    <div class="column is-10">
+        <hr/>
         <!-- START ARTICLE -->
-        <div class="card article">
-            <div class="card-content">
+<!--        <div class="card article">-->
+<!--            <div class="card-content">-->
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <header class="entry-header">
                         <div class="media">
@@ -35,10 +34,8 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <hr>
 
                     </header><!-- .entry-header -->
-                    </hr>
                     <?php cool_again_post_thumbnail(); ?>
 
                     <div class="entry-content">
@@ -67,7 +64,3 @@
                         <?php cool_again_entry_footer(); ?>
                     </footer><!-- .entry-footer -->
                 </article><!-- #post-<?php the_ID(); ?> -->
-            </div>
-        </div>
-    </div>
-</div>

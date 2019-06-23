@@ -10,9 +10,9 @@
 get_header();
 ?>
 <div class="columns">
-    <div class="column is-10-mobile is-offset-1-mobile is-7 is-offset-1">
-        <div id="primary" class="content-area">
-            <main id="main"  class="site-main">
+    <div class="column is-12-mobile is-12">
+            <main id="main">
+            <hr>
             <?php
 
             while ( have_posts() ) :
@@ -56,11 +56,12 @@ get_header();
             endif;
             ?>
             </main><!-- #main -->
+        <hr>
 	    </div><!-- #primary -->
+        <?php
+        get_sidebar();
+        ?>
     </div>
-    <?php
-            get_sidebar();
-    ?>
 </div>
 <?php
 get_footer();
