@@ -10,11 +10,11 @@
 get_header();
 ?>
 <div class="columns">
-    <div class="column is-12-mobile is-12">
+    <div class="column is-12-mobile is-8">
             <main id="main">
             <hr>
             <?php
-
+            get_template_part( 'template-parts/breadcrumb');
             while ( have_posts() ) :
                 the_post();
                 the_title( '<h1 class="entry-title title is-1">', '</h1>' );

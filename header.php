@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 <div id="page" class="site">
     <header class="hero is-12-mobile is-bold is-family-sans-serif">
         <div class="hero-body">
