@@ -11,8 +11,7 @@
 
 ?>
 	</div><!-- #content -->
-<hr>
-<footer id="colophon">
+<footer id="colophon" class="footer">
     <div class="site-info content has-text-centered ">
         <p>
             <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cool-again' ) ); ?>">

@@ -11,7 +11,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 ?>
-            <div class="column is-4 is-tablet-12 section">
+            <div class="column is-3 is-tablet-12 section">
                 <aside id="secondary" class="widget-area class="menu has-text-center">
                     <?php dynamic_sidebar( 'sidebar-1' ); ?>
                 </aside><!-- #secondary -->

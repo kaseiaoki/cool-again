@@ -22,20 +22,21 @@
 
 <body <?php body_class(); ?> >
 <div id="page" class="site">
-    <header class="hero is-12-mobile is-bold is-family-sans-serif">
+    <header class="hero is-bold is-family-sans-serif is-info">
         <div class="hero-body">
             <div class="container">
                 <div class="columns">
-                        <div class="column is-2 is-12-mobile">
-                            <figure class="image is-128x128">
-                                <img class="is-rounded" src="<?php header_image(); ?>" alt="" />
+                        <div class="column is-1 is-12-mobile is-offset-2">
+                            <figure class="image is-64x64">
+                                <img  src="<?php header_image(); ?>" alt="" />
                             </figure>
                         </div>
+                        <card>
                         <div class="title column is-10 is-12-mobile">
                                 <?php
                                 if ( is_front_page() && is_home() ) :
                                     ?>
-                                <h1 class="site-title title is-1"><a  class=""<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                                <h1 class="site-title title is-1"><a  class="has-text-white <?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                                 <?php
                                 else:
                                 ?>
@@ -53,4 +54,4 @@
             </div>
         </div>
     </header>
-    <div id="content" class="site-conten"  >
+    <div id="content" class="site-content has-background-white-ter"  >

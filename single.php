@@ -10,7 +10,7 @@
 get_header();
 ?>
 <div class="columns">
-    <div class="column is-12-mobile is-8">
+    <div class="column is-12-mobile is-7 is-offset-1">
             <main id="main">
             <hr>
             <?php
