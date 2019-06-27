@@ -126,7 +126,7 @@ function cool_again_scripts() {
 
 	wp_enqueue_script( 'cool-again-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
     wp_enqueue_style('bulma', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css');
-    wp_enqueue_style('bulma-prefers-dark', 'https://unpkg.com/bulma-prefers-dark');
+    wp_enqueue_style('fa', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -161,6 +161,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 function custom_excerpt_length( $length ) {
-    return 5;
+    return 3;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

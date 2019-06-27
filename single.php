@@ -56,7 +56,6 @@ get_header();
             endif;
             ?>
             </main><!-- #main -->
-        <hr>
 	    </div><!-- #primary -->
         <?php
         get_sidebar();

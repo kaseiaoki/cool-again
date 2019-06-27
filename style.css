@@ -979,3 +979,7 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+.post-card {
+	margin : 0 1em;
+}

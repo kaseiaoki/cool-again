@@ -22,36 +22,36 @@
 
 <body <?php body_class(); ?> >
 <div id="page" class="site">
-    <header class="hero is-bold is-family-sans-serif is-info">
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns">
-                        <div class="column is-1 is-12-mobile is-offset-2">
-                            <figure class="image is-64x64">
-                                <img  src="<?php header_image(); ?>" alt="" />
-                            </figure>
-                        </div>
-                        <card>
-                        <div class="title column is-10 is-12-mobile">
-                                <?php
-                                if ( is_front_page() && is_home() ) :
+        <header class="hero is-family-sans-serif is-info">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                            <div class="column is-1 is-12-mobile is-offset-2">
+                                <figure class="image is-64x64">
+                                    <img  src="<?php header_image(); ?>" alt="" />
+                                </figure>
+                            </div>
+                            <card>
+                            <div class="title column is-10 is-12-mobile">
+                                    <?php
+                                    if ( is_front_page() && is_home() ) :
+                                        ?>
+                                    <h1 class="site-title title is-1"><a  class="has-text-white <?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                                    <?php
+                                    else:
                                     ?>
-                                <h1 class="site-title title is-1"><a  class="has-text-white <?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                                <?php
-                                else:
-                                ?>
-                                <p class="site-title title is-1"><a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-                                <?php
-                                endif;
-                                $cool_again_description = get_bloginfo( 'description', 'display' );
-                                if ( $cool_again_description || is_customize_preview() ) :
-                                ?>
-                                <p class="site-description subtitle is-4"><?php echo $cool_again_description; /* WPCS: xss ok. */ ?></p>
-                                <?php endif; ?>
+                                    <p class="site-title title is-1"><a class="has-text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                                    <?php
+                                    endif;
+                                    $cool_again_description = get_bloginfo( 'description', 'display' );
+                                    if ( $cool_again_description || is_customize_preview() ) :
+                                    ?>
+                                    <p class="site-description subtitle is-4"><?php echo $cool_again_description; /* WPCS: xss ok. */ ?></p>
+                                    <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <div id="content" class="site-content has-background-white-ter"  >
+        </header>
+    <div id="content" class="site-content section has-background-white-ter"  >

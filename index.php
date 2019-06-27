@@ -14,18 +14,29 @@
 
 get_header();
 ?>
-<div class="columns section">
-    <div class="column is-9 is-12-mobile">
         <div id="primary" class="content-area">
             <main id="main"  class="site-main">
-                <div class="columns">
+                <div class="columns has-background-white-ter">
+                    <div class="column is-11-desktop is-12-mobile">
+                    <section class="hero">
+                        <div class="hero-body">
+                            <div class="container">
+                                <h2 class="title has-text-centered is-1 has-text-grey">
+                                    * Recent Posts
+                                </h2>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </div>
+                <div class="columns has-background-white-ter">
                 <?php
                 /* query */
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 4,
                     'orderby' => 'post_date',
-                    'order'   => 'ASC',
+                    'order'   => 'DESC',
                 );
                 $query = new WP_Query( $args );
                 if ( $query->have_posts() ) :
@@ -50,10 +61,22 @@ get_header();
                     get_template_part( 'template-parts/content', 'none' );
                 endif;
                 ?>
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div>
+            </main><!-- #main -->
+        </div>
+        <div class="columns has-background-white-ter">
+            <div class="column is-11-desktop is-12-mobile">
+                <section class="hero">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h2 class="title has-text-centered is-1 has-text-grey">
+                                *  *
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 <?php
-get_sidebar();
 get_footer();
 
