@@ -133,13 +133,16 @@ if ( ! function_exists( 'cool_again_post_thumbnail' ) ) :
 		<?php else : ?>
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+            <figure class="image is-4by3">
 			<?php
 			the_post_thumbnail( 'post-thumbnail', array(
+                'class' => "image",
 				'alt' => the_title_attribute( array(
 					'echo' => false,
 				) ),
 			) );
 			?>
+            </figure>
 		</a>
 
 		<?php

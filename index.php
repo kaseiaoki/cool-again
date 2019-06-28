@@ -16,25 +16,12 @@ get_header();
 ?>
         <div id="primary" class="content-area">
             <main id="main"  class="site-main">
-                <div class="columns has-background-white-ter">
-                    <div class="column is-11-desktop is-12-mobile">
-                    <section class="hero">
-                        <div class="hero-body">
-                            <div class="container">
-                                <h2 class="title has-text-centered is-1 has-text-grey">
-                                    * Recent Posts
-                                </h2>
-                            </div>
-                        </div>
-                    </section>
-                    </div>
-                </div>
-                <div class="columns has-background-white-ter">
+                <section class="columns has-background-white-ter">
                 <?php
                 /* query */
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 4,
+                    'posts_per_page' => 12,
                     'orderby' => 'post_date',
                     'order'   => 'DESC',
                 );
@@ -42,8 +29,10 @@ get_header();
                 if ( $query->have_posts() ) :
                 ?>
                 <?php
+                    $index = 0;
                     /* Start the Loop */
                     while ( $query->have_posts() ) :
+                        $index++;
                         $query->the_post();
                         /*
                          * Include the Post-Type-specific template for the content.
@@ -51,7 +40,9 @@ get_header();
                          * called content-___.php (where ___ is the Post Type name) and that will be used instead.
                          */
                         get_template_part( 'template-parts/content', get_post_type() );
-
+                        if ($index % 4 ===0) {
+                            echo '</section><section class="columns has-background-white-ter">';
+                        }
                     endwhile;
 
                     the_posts_navigation();
@@ -62,21 +53,7 @@ get_header();
                 endif;
                 ?>
             </main><!-- #main -->
-        </div>
-        <div class="columns has-background-white-ter">
-            <div class="column is-11-desktop is-12-mobile">
-                <section class="hero">
-                    <div class="hero-body">
-                        <div class="container">
-                            <h2 class="title has-text-centered is-1 has-text-grey">
-                                *  *
-                            </h2>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
+<!--        </div>-->
 <?php
 get_footer();
 
